@@ -1,0 +1,488 @@
+<!Doctype html>
+<head>
+<!-- Ever gone crazy with alts to a piece of art where you add half a dozen outfits, poses, eyes, and facial expressions and now you can't make images for each combination without going into the quadruple digits? Now you don't have to! Just save each layer as its own image and link them all to this html file! It comes with a built-in navigation menu that you can use to cycle through each option and lays them all on top of one another just like in your art program! No more scrolling through, hiding or unhiding your layers. Cycle though every option in any combination you want!
+
+*Expandable Navigation that hides away with the press of a button!
+*CSS Customizeability!
+*Have up to 12 layers!
+*Mobile Friendly!
+
+-->
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<!--
+<div class="text">
+	<input type="text">
+</div>
+-->
+
+<div id="navigator">
+	<div class="hide">
+		<button onclick="hidenav()">Hide/Show</button>
+		<!--<p>slideIndex</p>-->
+	</div>
+	<div id="layer1" class="nav">
+	<button class="left" onclick="plusDivs1(-1)">&#10094;</button>
+	<div class="name"><b>X-ray</b></div>
+	<button class="right" onclick="plusDivs1(+1)">&#10095;</button>
+	</div>
+	<div id="layer2" class="nav">
+	<button class="left" onclick="plusDivs2(-1)">&#10094;</button>
+	<div class="name"><b>Background</b></div>
+	<button class="right" onclick="plusDivs2(+1)">&#10095;</button>
+	</div>
+	<div id="layer3" class="nav">
+	<button class="left" onclick="plusDivs3(-1)">&#10094;</button>
+	<div class="name"><b>Pose</b></div>
+	<button class="right" onclick="plusDivs3(+1)">&#10095;</button>
+	</div>
+	<div id="layer10" class="nav">
+	<button class="left" onclick="plusDivs10(-1)">&#10094;</button>
+	<div class="name"><b>Amy Blush</b></div>
+	<button class="right" onclick="plusDivs10(+1)">&#10095;</button>
+	</div>
+	<div id="layer4" class="nav">
+	<button class="left" onclick="plusDivs4(-1)">&#10094;</button>
+	<div class="name"><b>Amy Eyes</b></div>
+	<button class="right" onclick="plusDivs4(+1)">&#10095;</button>
+	</div>
+	<div id="layer5" class="nav">
+	<button class="left" onclick="plusDivs5(-1)">&#10094;</button>
+	<div class="name"><b>Amy Mouth</b></div>
+	<button class="right" onclick="plusDivs5(+1)">&#10095;</button>
+	</div>
+	<div id="layer12" class="nav">
+	<button class="left" onclick="plusDivs12(-1)">&#10094;</button>
+	<div class="name"><b>Emotion</b></div>
+	<button class="right" onclick="plusDivs12(+1)">&#10095;</button>
+	</div>
+	<div id="layer7" class="nav">
+	<button class="left" onclick="plusDivs7(-1)">&#10094;</button>
+	<div class="name"><b>Ilu Eyes</b></div>
+	<button class="right" onclick="plusDivs7(+1)">&#10095;</button>
+	</div>
+	<div id="layer6" class="nav">
+	<button class="left" onclick="plusDivs6(-1)">&#10094;</button>
+	<div class="name"><b>Ilu Mouth</b></div>
+	<button class="right" onclick="plusDivs6(+1)">&#10095;</button>
+	</div>
+	<div id="layer8" class="nav">
+	<button class="left" onclick="plusDivs8(-1)">&#10094;</button>
+	<div class="name"><b>Fertilization</b></div>
+	<button class="right" onclick="plusDivs8(+1)">&#10095;</button>
+	</div>
+	<div id="layer9" class="nav">
+	<button class="left" onclick="plusDivs9(-1)">&#10094;</button>
+	<div class="name"><b>Balloon</b></div>
+	<button class="right" onclick="plusDivs9(+1)">&#10095;</button>
+	</div>
+	<div id="layer11" class="nav">
+	<button class="left" onclick="plusDivs11(-1)">&#10094;</button>
+	<div class="name"><b>Magic</b></div>
+	<button class="right" onclick="plusDivs11(+1)">&#10095;</button>
+	</div>
+	<button class="nav" onclick="reset()">Reset All</button>
+	<button class="nav" onclick="debug()">Get slideIndex</button>
+	<button class="nav" onclick="hideX()">Hide Internal</button>
+</div>
+
+<!-- ------------------------------- -->
+<!-- VV add your image links here VV -->
+<!-- ------------------------------- -->
+
+<!-- LAYER 1 | x-ray -->
+<div class="img_layer">
+<img class="slides_L1" src="images/bg_x1.png">
+<img class="slides_L1" src="images/bg_x2.png">
+<img class="slides_L1" src="images/bg_x3.png">
+<img class="slides_L1" src="images/bg_x4.png">
+<img class="slides_L1" src="images/bg_x5.png">
+<img class="slides_L1" src="images/bg_x6.png">
+<img class="slides_L1" src="images/bg_xx1.png">
+<img class="slides_L1" src="images/bg_xx2.png">
+<img class="slides_L1" src="images/bg_xx3.png">
+<img class="slides_L1" src="images/bg_xx4.png">
+<img class="slides_L1" src="images/bg_xx5.png">
+<img class="slides_L1" src="images/bg_xx6.png">
+</div>
+
+<!-- LAYER 2 | Background -->
+<div class="img_layer">
+<img class="slides_L2" src="images/none.png">
+<img class="slides_L2" src="images/bg0.png">
+<img class="slides_L2" src="images/bg1.png">
+<img class="slides_L2" src="images/bg2.png">
+<img class="slides_L2" src="images/bg3.png">
+<img class="slides_L2" src="images/bg4.png">
+<img class="slides_L2" src="images/bg5.png">
+<img class="slides_L2" src="images/bg6.png">
+</div>
+
+<!-- LAYER 8 | Fertilization -->
+<div class="img_layer">
+<img class="slides_L8" src="images/none.png">
+<img class="slides_L8" src="images/mpr1.png">
+<img class="slides_L8" src="images/mpr2.png">
+<img class="slides_L8" src="images/mpr3.png">
+<img class="slides_L8" src="images/mpr4.png">
+<img class="slides_L8" src="images/mpr5.png">
+<img class="slides_L8" src="images/mpr6.png">
+<img class="slides_L8" src="images/mpr7.png">
+<img class="slides_L8" src="images/mpr8.png">
+</div>
+
+<!-- LAYER 3 | Pose -->
+<div class="img_layer">
+<img class="slides_L3" src="images/pose_1-1.png">
+<img class="slides_L3" src="images/pose_1-2.png">
+<img class="slides_L3" src="images/pose_1-3.png">
+<img class="slides_L3" src="images/pose_1-4.png">
+<img class="slides_L3" src="images/pose_2-1.png">
+<img class="slides_L3" src="images/pose_2-2.png">
+<img class="slides_L3" src="images/pose_2-3.png">
+<img class="slides_L3" src="images/pose_2-4.png">
+</div>
+
+<!-- LAYER 1a | x-ray 2 -->
+<div class="img_layer">
+<img class="slides_L1a" src="images/x1.png">
+<img class="slides_L1a" src="images/x2.png">
+<img class="slides_L1a" src="images/x3.png">
+<img class="slides_L1a" src="images/x4.png">
+<img class="slides_L1a" src="images/x5.png">
+<img class="slides_L1a" src="images/x6.png">
+<img class="slides_L1a" src="images/xo1.png">
+<img class="slides_L1a" src="images/xo2.png">
+<img class="slides_L1a" src="images/xo3.png">
+<img class="slides_L1a" src="images/xo4.png">
+<img class="slides_L1a" src="images/xo5.png">
+<img class="slides_L1a" src="images/xo6.png">
+<img class="slides_L1a" src="images/none.png">
+</div>
+
+<!-- LAYER 10 | Amy Blush -->
+<div class="img_layer">
+<img class="slides_L10" src="images/none.png">
+<img class="slides_L10" src="images/blush1.png">
+<img class="slides_L10" src="images/blush2.png">
+<img class="slides_L10" src="images/blush3.png">
+<img class="slides_L10" src="images/blush4.png">
+</div>
+
+<!-- LAYER 4 | Amy Eyes -->
+<div class="img_layer">
+<img class="slides_L4" src="images/amy_1_eyes1.png">
+<img class="slides_L4" src="images/amy_1_eyes2.png">
+<img class="slides_L4" src="images/amy_1_eyes3.png">
+<img class="slides_L4" src="images/amy_1_eyes4.png">
+<img class="slides_L4" src="images/amy_1_eyes5.png">
+<img class="slides_L4" src="images/amy_1_eyes6.png">
+<img class="slides_L4" src="images/amy_1_eyes7.png">
+<img class="slides_L4" src="images/amy_1_eyes8.png">
+<img class="slides_L4" src="images/amy_1_eyes9.png">
+<img class="slides_L4" src="images/amy_1_eyes10.png">
+<img class="slides_L4" src="images/amy_1_eyes11.png">
+<img class="slides_L4" src="images/amy_1_eyes12.png">
+<img class="slides_L4" src="images/amy_2_eyes1.png">
+<img class="slides_L4" src="images/amy_2_eyes2.png">
+<img class="slides_L4" src="images/amy_2_eyes3.png">
+<img class="slides_L4" src="images/amy_2_eyes4.png">
+<img class="slides_L4" src="images/amy_2_eyes5.png">
+<img class="slides_L4" src="images/amy_2_eyes6.png">
+<img class="slides_L4" src="images/amy_2_eyes7.png">
+<img class="slides_L4" src="images/amy_2_eyes8.png">
+<img class="slides_L4" src="images/amy_2_eyes9.png">
+<img class="slides_L4" src="images/amy_2_eyes10.png">
+<img class="slides_L4" src="images/amy_3_eyes1.png">
+<img class="slides_L4" src="images/amy_3_eyes2.png">
+<img class="slides_L4" src="images/amy_3_eyes3.png">
+<img class="slides_L4" src="images/amy_3_eyes4.png">
+<img class="slides_L4" src="images/amy_3_eyes5.png">
+<img class="slides_L4" src="images/amy_3_eyes6.png">
+<img class="slides_L4" src="images/amy_3_eyes7.png">
+<img class="slides_L4" src="images/amy_3_eyes8.png">
+<img class="slides_L4" src="images/amy_3_eyes9.png">
+<img class="slides_L4" src="images/amy_3_eyes10.png">
+<img class="slides_L4" src="images/amy_3_eyes11.png">
+<img class="slides_L4" src="images/amy_4_eyes1.png">
+<img class="slides_L4" src="images/amy_4_eyes2.png">
+<img class="slides_L4" src="images/amy_4_eyes3.png">
+<img class="slides_L4" src="images/amy_4_eyes4.png">
+<img class="slides_L4" src="images/amy_4_eyes5.png">
+<img class="slides_L4" src="images/amy_4_eyes6.png">
+<img class="slides_L4" src="images/amy_4_eyes7.png">
+</div>
+
+<!-- LAYER 5 | Amy Mouth -->
+<div class="img_layer">
+<img class="slides_L5" src="images/amy_1_mouth1.png">
+<img class="slides_L5" src="images/amy_1_mouth2.png">
+<img class="slides_L5" src="images/amy_1_mouth3.png">
+<img class="slides_L5" src="images/amy_1_mouth4.png">
+<img class="slides_L5" src="images/amy_1_mouth5.png">
+<img class="slides_L5" src="images/amy_1_mouth6.png">
+<img class="slides_L5" src="images/amy_1_mouth7.png">
+<img class="slides_L5" src="images/amy_1_mouth8.png">
+<img class="slides_L5" src="images/amy_1_mouth9.png">
+<img class="slides_L5" src="images/amy_1_mouth10.png">
+<img class="slides_L5" src="images/amy_1_mouth11.png">
+<img class="slides_L5" src="images/amy_2_mouth1.png">
+<img class="slides_L5" src="images/amy_2_mouth2.png">
+<img class="slides_L5" src="images/amy_2_mouth3.png">
+<img class="slides_L5" src="images/amy_2_mouth4.png">
+<img class="slides_L5" src="images/amy_2_mouth5.png">
+<img class="slides_L5" src="images/amy_2_mouth6.png">
+<img class="slides_L5" src="images/amy_2_mouth7.png">
+<img class="slides_L5" src="images/amy_2_mouth8.png">
+<img class="slides_L5" src="images/amy_2_mouth9.png">
+<img class="slides_L5" src="images/amy_2_mouth10.png">
+<img class="slides_L5" src="images/amy_3_mouth1.png">
+<img class="slides_L5" src="images/amy_3_mouth2.png">
+<img class="slides_L5" src="images/amy_3_mouth3.png">
+<img class="slides_L5" src="images/amy_3_mouth4.png">
+<img class="slides_L5" src="images/amy_3_mouth5.png">
+<img class="slides_L5" src="images/amy_3_mouth6.png">
+<img class="slides_L5" src="images/amy_3_mouth7.png">
+<img class="slides_L5" src="images/amy_3_mouth8.png">
+<img class="slides_L5" src="images/amy_3_mouth9.png">
+<img class="slides_L5" src="images/amy_3_mouth10.png">
+<img class="slides_L5" src="images/amy_4_mouth1.png">
+<img class="slides_L5" src="images/amy_4_mouth2.png">
+<img class="slides_L5" src="images/amy_4_mouth3.png">
+<img class="slides_L5" src="images/amy_4_mouth4.png">
+<img class="slides_L5" src="images/amy_4_mouth5.png">
+<img class="slides_L5" src="images/amy_4_mouth6.png">
+<img class="slides_L5" src="images/amy_4_mouth7.png">
+</div>
+
+<!-- LAYER 6 | Ilu Mouth -->
+<div class="img_layer">
+<img class="slides_L6" src="images/ilu_1_mouth1.png">
+<img class="slides_L6" src="images/ilu_1_mouth2.png">
+<img class="slides_L6" src="images/ilu_1_mouth3.png">
+<img class="slides_L6" src="images/ilu_2_mouth1.png">
+<img class="slides_L6" src="images/ilu_2_mouth2.png">
+<img class="slides_L6" src="images/ilu_2_mouth3.png">
+<img class="slides_L6" src="images/ilu_2_mouth4.png">
+<img class="slides_L6" src="images/ilu_2_mouth5.png">
+</div>
+
+<!-- LAYER 7 | Ilu Eyes	-->
+<div class="img_layer">
+<img class="slides_L7" src="images/ilu_1_eyes1.png">
+<img class="slides_L7" src="images/ilu_1_eyes2.png">
+<img class="slides_L7" src="images/ilu_2_eyes1.png">
+<img class="slides_L7" src="images/ilu_2_eyes2.png">
+<img class="slides_L7" src="images/ilu_2_eyes3.png">
+<img class="slides_L7" src="images/ilu_2_eyes4.png">
+<img class="slides_L7" src="images/ilu_2_eyes5.png">
+<img class="slides_L7" src="images/ilu_2_eyes6.png">
+</div>
+
+<!-- LAYER 9 | Bubble -->
+<div class="img_layer">
+<img class="slides_L9" src="images/none.png">
+<img class="slides_L9" src="images/sperm1.png">
+<img class="slides_L9" src="images/sperm2.png">
+<img class="slides_L9" src="images/sperm3.png">
+<img class="slides_L9" src="images/sperm4.png">
+</div>
+
+<!-- LAYER 12 | Amy Emotions -->
+<div class="img_layer">
+<img class="slides_L12" src="images/none.png">
+<img class="slides_L12" src="images/amy_1_tears.png">
+<img class="slides_L12" src="images/amy_1_tears2.png">
+<img class="slides_L12" src="images/amy_1_tears3.png">
+<img class="slides_L12" src="images/amy_2_tears.png">
+<img class="slides_L12" src="images/amy_2_tears2.png">
+<img class="slides_L12" src="images/amy_4_tears.png">
+<img class="slides_L12" src="images/amy_4_tears2.png">
+<img class="slides_L12" src="images/amy_hearts1.png">
+<img class="slides_L12" src="images/amy_hearts2.png">
+</div>
+
+<!-- LAYER 11 | Magic -->
+<div class="img_layer">
+<img class="slides_L11" src="images/none.png">
+<img class="slides_L11" src="images/magic1.png">
+<img class="slides_L11" src="images/magic2.png">
+<img class="slides_L11" src="images/magic3.png">
+<img class="slides_L11" src="images/magic4.png">
+<img class="slides_L11" src="images/magic5.png">
+</div>
+
+
+
+<script type="text/javascript">
+var slideIndex = 1;
+var slideIndexL1 = 1;
+var slideIndexL1a = 1;
+var slideIndexL2 = 1;
+var slideIndexL3 = 1;
+var slideIndexL4 = 1;
+var slideIndexL5 = 1;
+var slideIndexL6 = 1;
+var slideIndexL7 = 1;
+var slideIndexL8 = 1;
+var slideIndexL9 = 1;
+var slideIndexL10 = 1;
+var slideIndexL11 = 1;
+var slideIndexL12 = 1;
+
+/*
+showDivs(1, "L1");
+showDivs(1, "L2");
+showDivs(1, "L3");
+*/
+
+function jump(n,l){
+	showDivs(n, l);
+}
+
+function debug(){
+	alert(slideIndex);
+}
+
+function reset(){
+	showDivs(1, "L1");
+	showDivs(1, "L1a");
+	showDivs(1, "L2");
+	showDivs(1, "L3");
+	showDivs(1, "L4");
+	showDivs(1, "L5");
+	showDivs(1, "L6");
+	showDivs(1, "L7");
+	showDivs(1, "L8");
+	showDivs(1, "L9");
+	showDivs(1, "L10");
+	showDivs(1, "L11");
+	showDivs(1, "L12");
+	
+	slideIndex = 1;
+	slideIndexL1 = 1;
+	slideIndexL1a = 1;
+	slideIndexL2 = 1;
+	slideIndexL3 = 1;
+	slideIndexL4 = 1;
+	slideIndexL5 = 1;
+	slideIndexL6 = 1;
+	slideIndexL7 = 1;
+	slideIndexL8 = 1;
+	slideIndexL9 = 1;
+	slideIndexL10 = 1;
+	slideIndexL11 = 1;
+	slideIndexL12 = 1;
+}
+
+function hideX() {
+	var layerEnd = 13;
+	if (slideIndex != layerEnd){
+		showDivs(slideIndex = layerEnd, "L1a");
+	} else {
+		showDivs(slideIndex = slideIndexL1a, "L1a");
+	}
+}
+
+function reIndex(f) {
+	if (slideIndex != 1){
+		slideIndex = f;
+	} else if (f == 1){
+		slideIndex = 1;
+	}
+	/*alert(f);*/
+}
+	
+function plusDivs1(n) {
+	reIndex(slideIndexL1);
+	showDivs(slideIndex += n, "L1");
+	showDivs(slideIndex, "L1a");
+	slideIndexL1 = slideIndex;
+}
+function plusDivs2(n) {
+	reIndex(slideIndexL2);
+	showDivs(slideIndex += n, "L2");
+	slideIndexL2 = slideIndex;
+}
+function plusDivs3(n) {
+	reIndex(slideIndexL3);
+	showDivs(slideIndex += n, "L3");
+	slideIndexL3 = slideIndex;
+}
+function plusDivs4(n) {
+	reIndex(slideIndexL4);
+	showDivs(slideIndex += n, "L4");
+	slideIndexL4 = slideIndex;
+}
+function plusDivs5(n) {
+	reIndex(slideIndexL5);
+	showDivs(slideIndex += n, "L5");
+	slideIndexL5 = slideIndex;
+}
+function plusDivs6(n) {
+	reIndex(slideIndexL6);
+	showDivs(slideIndex += n, "L6");
+	slideIndexL6 = slideIndex;
+}
+function plusDivs7(n) {
+	reIndex(slideIndexL7);
+	showDivs(slideIndex += n, "L7");
+	slideIndexL7 = slideIndex;
+}
+function plusDivs8(n) {
+	reIndex(slideIndexL8);
+	showDivs(slideIndex += n, "L8");
+	slideIndexL8 = slideIndex;
+}
+function plusDivs9(n) {
+	reIndex(slideIndexL9);
+	showDivs(slideIndex += n, "L9");
+	slideIndexL9 = slideIndex;
+}
+function plusDivs10(n) {
+	reIndex(slideIndexL10);
+	showDivs(slideIndex += n, "L10");
+	slideIndexL10 = slideIndex;
+}
+function plusDivs11(n) {
+	reIndex(slideIndexL11);
+	showDivs(slideIndex += n, "L11");
+	slideIndexL11 = slideIndex;
+}
+function plusDivs12(n) {
+	reIndex(slideIndexL12);
+	showDivs(slideIndex += n, "L12");
+	slideIndexL12 = slideIndex;
+}
+
+function showDivs(n, l) {
+	var i;
+	var l;
+	var x = document.getElementsByClassName("slides_" + l);
+	if (n > x.length) {slideIndex = 1} 
+	if (n < 1) {slideIndex = x.length};
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none"; 
+	}
+	x[slideIndex-1].style.display = "block"; 
+}
+
+function hidenav(){
+	var nv = document.getElementsByClassName("nav");
+	for (i = 0; i < nv.length; i++) {
+		if (nv[i].style.display == "none"){
+		nv[i].style.display = "block";
+		} else {
+		nv[i].style.display = "none";
+		}
+	}
+}
+</script>
+
+</body>
+</html>
+
